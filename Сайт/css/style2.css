@@ -1,0 +1,337 @@
+@font-face {
+    font-family: teehee;
+    src: url(/шрифты/teehee/TeeheeTownrg.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
+@font-face {
+    font-family: carvist;
+    src: url(/шрифты/carvist/TT\ Carvist\ Trial\ Bold.ttf);
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
+@font-face {
+    font-family: gymkhana;
+    src: url(/шрифты/gymkhana/gymkhana-bk.ttf);
+    font-weight: normal;
+    font-style: normal;  
+    font-display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --border_rad20px:20px;
+}
+body{
+    background-color: #0e141d;
+    height: 200vh;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.header{
+    background-color: #193255;
+    margin-top: 40px;
+    text-align: center;
+}
+.go_back{
+    background-color: #132338;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 20px;
+}
+main{
+}
+/* modal win */
+.modal_win{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s;
+    z-index: 5;
+    /* display: none; */
+    /* opacity: 0.1; */
+}
+.modal_win_main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.modal_win_wrapper{
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    background-color: #193255;
+    position: fixed;
+    transform: translateY(65%);
+    border-radius: 16px;
+    box-shadow: 0 0 110PX 1px white;
+    border: solid 2px #010d1d;
+    transition: 0.4s;
+    /* scale: 0.1; */
+}
+.close_modal_win{
+    padding:10px 20px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    border: transparent;
+    border-radius: 10px 5px 10px 20px;
+    background-color: #6d89af;
+    font-weight: 800;
+    color:#97ce01;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    border-top: solid 2px #010d1d;
+    border-right: solid 2px #010d1d;
+}
+.close_modal_win:hover{
+    background-color: #5583c5;
+    color:#bbff00;
+}
+.name_game{
+    position: relative;
+    top: 40px;
+    color: white;
+}
+.switch{
+    position: relative;
+    top: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.switch button{
+    padding: 10px;
+    width: 220px;
+    color: white;
+    background-color:#215399;
+    border-radius: var(--border_rad20px);
+    border: 1px solid black;
+    /* border: transparent; */
+    font-weight: 600;
+}
+.switch button:hover{
+    background-color:#074396;
+}
+.min_equipment{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.content_table{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.min_equipment img{
+    width: 15px;
+}
+.recommended_equipment img{
+    width: 15px;
+}
+.recommended_equipment{
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+.img_choice_min{
+    display: block;
+    opacity: 0;
+    transition: 0.3s;
+}
+.img_choice_rec{
+    transition: 0.3s;
+    display: block;
+    opacity: 1;
+}
+.content_text{
+    position: absolute;
+    right: 0;
+    top: 140px;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 650px;
+    height: 200px;
+    display: flex;
+    font-size: 1.3rem;
+    color: white;
+    overflow: hidden;
+    /* background-color: rgba(59,107, 175,.5); */
+    padding: 10px;
+    /* border-radius: var(--border_rad20px); */
+    /* border: solid black 1px; */
+}
+.fps_info{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: rgba(59, 107, 175,0.5);
+    padding: 10px 20px;
+    width: 400px;
+    height: 340px;
+    border-radius: var(--border_rad20px);
+    border: solid black 1px;
+    color:#97ce01;
+        h2{
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 2.2rem;
+    }
+}
+
+.table_fps{
+    display:  grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 1.4rem;
+    h3 {
+        text-align: left;
+    }
+    p {
+        text-align:  right;
+        color: white;
+        letter-spacing: .2rem;
+    }
+    row-gap: 1.6rem;
+}
+.table{
+    display: grid;
+    grid-template-columns: 1fr 3fr 7fr;
+    column-gap: 10px;
+    row-gap: 16px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59 ,107 ,175 ,.5);
+    padding: 16px;
+    border-radius: var(--border_rad20px);
+    border: solid black 1px;
+}
+.table img{
+    width: 30px;
+}
+.img_cart{
+    position: absolute;
+    top: 140px;
+    left: 10px;
+}
+.img_cart img{
+    object-fit:cover;
+    width: 380px;
+    height: 200px;
+    border-radius: 40px;
+}
+.name_accessories{
+    color: white;
+    text-align: left;
+    border-right: solid gray 1px;
+    padding-right: 10px;
+}
+.version_accessories{
+    color: white;
+    text-align: left;
+}
+/* game list */
+.game_list{
+    margin-top: 60px;
+}
+
+.game_info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px 20px;
+    gap: 20px;
+    
+}
+.dame_list_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game_screen_slaider{
+    display: flex;
+    width: 100%;
+    /* overflow: hidden; */
+    transition: .5s;
+}
+.game_screen_slaider img{
+    width: 100%;
+    height: 300px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    /* object-fit: cover; */
+    position: relative;
+    
+}
+.game_name{
+    text-align: center;
+    color:  white;
+    font-size: 2rem;
+}
+.nav-btn{
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: transparent;
+}
+.prev_btn{
+    left: 35px;
+}
+.next_btn{
+    right: 35px;
+}
+.btn_cont{
+    top: 40%;
+    z-index: 1;
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+.game_screen{
+    overflow: hidden;
+}
+.open_modal{
+    width: 100%;
+    max-width: 250px;
+    background-color: #074396;
+    color: white;
+    border: transparent;
+    padding: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: gymkhana;
+}
+.game{
+    text-align: center;
+    font-family: gymkhana;
+}
