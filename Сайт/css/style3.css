@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgColor1: #132338;
+    --bgColor2: #193255;
+    --bgBodyColor: #0e141d;
+    --textColor1: #a7e200
+}
+.header{
+    background-color: var(--bgColor1);
+    margin-top: 40px;
+    text-align: center;
+}
+.go_back{
+    background-color: var(--bgColor2);
+    border-radius: 10px;    
+    border: solid 1px black;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color: var(--bgBodyColor);
+}
