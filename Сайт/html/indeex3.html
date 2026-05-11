@@ -5,14 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style3.css">
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+        
 </head>
 <body>
     <header class="header">
         <a class="go_back" href="../html/index.html">Вернуться на главную</a>
     </header>   
     <main>
-
+        <div class="res">
+        <div class="components_list">
+            <ul class="categories">
+            </ul>
+        </div>
+        <div class="result_conf">
+            <p class="result_price_text">итоговая цена : </p>
+            <p class="result_price"></p>
+            <button class="open_components">Все комплектующие</button>
+        </div>
+        </div>
+        <div class="elementConfList">
+            <ul>
+                <li>
+                    <div class="cart">
+                        <img src="" alt="">
+                        <span class="text"></span>
+                    </div>
+                    <span class="price"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="field">
+            <div class="img_body">
+            <img src="../img/configBodyAfter.svg" alt="" class="pc_body">
+            <div class="body"><span class="choice" data-text="Корпус"></span></div>
+            <div class="cooler"><span class="choice" data-text="Кулер"></span></div>
+            <div class="ram"><span class="choice" data-text="Оперативка"></span></div>
+            <div class="HDD"><span class="choice" data-text="HDD"></span></div>
+            <div class="SSD"><span class="choice" data-text="SSD"></span></div>
+            <div class="M2"><span class="choice" data-text="M.2"></span></div>
+            <div class="GPU"><span class="choice" data-text="Видеокарта"></span></div>
+            <div class="MB"><span class="choice" data-text="MB"></span></div>
+            <div class="cpu"><span class="choice" data-text="Процессор"></span></div>
+            <div class="power"><span class="choice" data-text="Блок питания"></span></div>
+            </div>
+            <span class="info">?</span>
+            <div class="open_info">
+                <span>Изображение системного блока не отражает реальную конфигурацию, а представлено для наглядности</span>
+            </div>
+        </div>
     </main>
     <script src="../js/configurate.js"></script>
 </body>
