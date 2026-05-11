@@ -143,6 +143,7 @@ body{
     opacity: .4;
     background-color: rgba(14 ,20, 29,0.3);
     position: absolute;
+    transition: .5s;
 }
 .img_body div:hover{
     cursor: pointer;
