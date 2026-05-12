@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
 });
 function changeCategory(catId, catName){
+    const elementConfList = document.querySelector('.elementConfList')
+    elementConfList.innerHTML = ''
     fetch('../db/products.json')
     .then(response =>{
         return response.json();
@@ -23,12 +25,12 @@ function changeCategory(catId, catName){
     .then(products =>{
         products.forEach(item => {
             if(catId === item.category_id){
-                const elementConfList = document.querySelector('.elementConfList')
                 const li = document.createElement('li');
                 li.className = 'elementConf';
                 li.innerHTML = `
                 <div className= "cart"><img src ="" alt="cart"></div>
-                <span className ="text">item.name</span>`
+                <span className ="text">${item.name}</span>`
+                elementConfList.appendChild(li);
             }
         })
     })
