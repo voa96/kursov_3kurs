@@ -40,7 +40,7 @@ function changeCategory(catId){
                 const li = document.createElement('li');
                 li.className = 'elementConf';
                 li.innerHTML = `
-                <img src ="" alt="cart">
+                <img src ="" alt="${item.id}cart">
                 <span class ="text">${item.name}</span>`
                 elementConfList.appendChild(li);
             }

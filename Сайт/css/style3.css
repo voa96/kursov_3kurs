@@ -7,7 +7,8 @@
     --bgColor1: #132338;
     --bgColor2: #193255;
     --bgBodyColor: #0e141d;
-    --textColor1: #a7e200
+    --textColor1: #a7e200;
+    --accent: #a7e200;
 }
 a{
     text-decoration: none;
@@ -200,8 +201,8 @@ body{
     z-index: 3;
 }
 .power{
-    top: 70%;
-    left: 12%;
+    top: 69.5%;
+    left: 12.5%;
     width: 24%;
     height: 16%;
 }
@@ -266,7 +267,8 @@ body{
     white-space: nowrap;
 }
 .start {
-    border: solid 1px black;
+    
+    border: solid 1.8px rgba(167, 226, 0, .7);
     animation: pulse-glow 1.5s ease-in-out infinite;
 }
 @keyframes pulse-glow {
