@@ -265,10 +265,61 @@ body{
     transform-origin: right center;
     white-space: nowrap;
 }
+.start {
+    border: solid 1px black;
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+    0% {
+        background-color: var(--bgColor2);
+        box-shadow: 0 0 0 0 rgba(25, 50, 85, 0);
+    }
+    50% {
+        background-color: #2a4a7a;
+        box-shadow: 0 0 15px 5px rgba(42, 74, 122, 0.5);
+    }
+    100% {
+        background-color: var(--bgColor2);
+        box-shadow: 0 0 0 0 rgba(25, 50, 85, 0);
+    }
+}
 .choice::before {
     content: "+";
     font-weight: 300;
 }
 .choice:hover::before{
     content: attr(data-text);
+}
+.elementConfList-ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 12px 10px 0px 10px;
+    row-gap: 12px;
+}
+li{
+    list-style-type: none;
+}
+.text{
+    font-size: 1.2rem;
+    transition: .4s;
+}
+.elementConf{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    color: white;
+    gap: 8px;
+    user-select: none;
+    transition: .4s;
+}
+.elementConf:hover{
+    gap: 6px;
+    margin-bottom: 0px;
+    cursor: grab;
+    .text{
+        font-size: 1.3rem;
+    }
+}
+.elementConf:hover:active{
+    cursor: grabbing ;
 }
