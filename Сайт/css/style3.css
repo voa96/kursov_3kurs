@@ -325,3 +325,56 @@ li{
 .elementConf:hover:active{
     cursor: grabbing ;
 }
+/* ========== КНОПКА УДАЛЕНИЯ В ПРАВОМ ВЕРХНЕМ УГЛУ ТЕКСТА ========== */
+
+/* Контейнер компонента */
+.component-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: fadeInUp 0.3s ease;
+}
+
+/* Изображение компонента */
+.component-image {
+    position: relative;
+    display: inline-block;
+}
+
+.component-image img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Кнопка удаления - в правом верхнем углу изображения/текста */
+.remove-component {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 25;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.remove-component:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
