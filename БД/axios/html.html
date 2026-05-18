@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        display: grid;
+    }
+    .cont{
+        display: flex;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<body>
+    <main>
+        <section class="main">
+        <div class="cont">
+            <button class="get">получить все элементы</button>
+            <textarea class="user_id" placeholder="введите id">1</textarea>
+            <button class="element_by_id">элемент по id</button>
+        </div>
+        <div class="output">
+        </div>
+        </section>
+    </main>
+    <script src="axios.js"></script>
+</body>
+</html>

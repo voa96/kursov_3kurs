@@ -35,7 +35,7 @@ async function start() {
     try {
 
         await sequelize.authenticate();
-        console.log('✅ База данных подключена');
+        console.log('База данных подключена');
         
 
         await main();
@@ -45,7 +45,7 @@ async function start() {
         app.listen(port, () => {});
         
     } catch (error) {
-        console.error('❌ Ошибка:', error);
+        console.error('Ошибка:', error);
     }
 }
 
